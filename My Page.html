@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dammika Adikari</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-image: url("bg.jpg");
+			background-size: cover;
+			background-repeat: repeat-y;
+			background-attachment: scroll;
+		}
+
+		.para1, #para1, #para2 {
+			text-align: center;
+		}
+
+		#photo1 {
+			display: block;
+			margin: 10px auto;
+			width: 200px;
+			border-radius: 8px;
+		}
+
+		.center-cell {
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 10px;
+		}
+
+		.center-cell td {
+			text-align: left;
+			vertical-align: middle;
+		}
+
+		/* Hide checkboxes */
+		#show-home, #show-register ,#show-gallery #show-about {
+			display: none;
+		}
+
+		/* Hide all sections by default */
+		#home-section,#register-section,#gallery-section, #about-section {
+			display: none;
+		}
+
+		/* Show home by default */
+		#show-home:checked ~ table #home-section {
+			display: table-row;
+		}
+
+		#show-about:checked ~ table #about-section {
+			display: table-row;
+		}
+
+		#show-register:checked ~ table #register-section {
+			display: table-row;
+   		}
+
+		#show-gallery:checked ~ table #gallery-section{
+			display: table-row;
+		}
+
+
+		/* Buttons styled as links */
+		.nav-link {
+			cursor: pointer;
+			color: blue;
+			text-decoration: underline;
+		}
+		.register-table {
+   			margin-left: 0;
+   			border-collapse: collapse;
+			text-align: left;
+  		}
+
+ 		 .register-table td {
+   			 padding: 8px 10px;
+			 text-align: left;
+ 		 }
+
+  		.register-table td:first-child {
+			width: 160px;
+			white-space: nowrap;
+			font-weight: bold;
+ 		 }
+
+ 		.register-table input[type="text"],
+  		.register-table input[type="password"],
+  		.register-table input[type="date"],
+  		.register-table input[list] {
+   			 width: 200px;
+ 		}
+	</style>
+</head>
+<body>
+
+	<!-- Logic checkboxes -->
+	<input type="radio" id="show-home" name="page" checked />
+	<input type="radio" id="show-register" name="page" />
+	<input type="radio" id="show-gallery" name="page" />
+	<input type="radio" id="show-about" name="page" />
+	
+	<table border="1" style="width: 100vw;">
+		<tr>
+			<td colspan="4" style="height: 100px; padding: 0; position: relative;">
+				<img src="sir.png" alt="Image not Found" width="100" height="100" style="position: absolute; left: 0; top: 0;">
+				<h2 style="text-align: center; line-height: 100px; margin: 0;">ICT EXPERTS</h2>
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="4" style="padding: 0;">
+				<img src="sir1.jpg" alt="Image not Found" style="width: 100%; height: 100%;">
+			</td>
+		</tr>
+
+		<tr>
+			<!-- Label buttons that switch radio selection -->
+			<td align="center"><label class="nav-link" for="show-home">Home</label></td>
+			<td align="center"><label class="nav-link" for="show-register">Register</label></td>
+			<td align="center"><label class="nav-link" for="show-gallery">Gallery</label></td>
+			<td align="center"><label class="nav-link" for="show-about">About</label></td>
+		</tr>
+
+		<!-- Home Section -->
+		<tr id="home-section">
+			<td colspan="4">
+				<br>
+				<p id="para1">ICT EXPERT</p>
+				<p id="para2">Best A/l and O/l Ict class in Sri Lanka. This is an Official ICT EXPERTS Website. This Web Site Powered by Mr.Dammika Adikari.</p>
+				<br>
+				<table class="center-cell" border="1">
+					<caption align="top">Time Table</caption>
+					<tr><td>Grade 10</td><td>Saturday 12:30 - 14:30</td></tr>
+					<tr><td>Grade 11</td><td>Saturday 06:00 - 08:00</td></tr>
+					<tr><td>A/l 2026</td><td>Sunday 13:00 - 15:00</td></tr>
+					<tr><td>A/L 2027</td><td>Sunday 15:00 - 17:00</td></tr>
+					<tr><td>A/L 2025 Revision</td><td>Tuesday 07:30 - 16:30</td></tr>
+				</table>
+				<ul>
+					<li>AMS - Galgamuwa</li>
+					<li>Lexis - Nikawaratiya</li>
+				</ul>
+				<p class="para1"><b>Join us soon and get the best results</b></p><br/>
+			</td>
+		</tr>
+
+		<!-- About Section -->
+		<tr id="about-section">
+			<td colspan="4">
+				<br>
+				<p id="para1">ICT EXPERT</p>
+				<p class="para1">Best A/L and O/l ICT class in Sri Lanka. Powered by Mr.DHAMMIKA ADIKARI </p>
+				<img id="photo1" src="sir3.jpg" alt="Logo" />
+				<p class="para1">Contact</p>
+				<table class="center-cell" border="1">
+					<tr><td>Voice/Text : 071 987 94 62</td></tr>
+					<tr><td>Email : amdtadikari@gmail.com</td></tr>
+					<tr><td>Facebook : <a href="https://web.facebook.com/dammikat.adikari">Dammika Adikari</a></td></tr>
+				</table>
+				<ul>
+					<li>AMS - Galgamuwa</li>
+					<li>Lexis - Nikawaratiya</li>
+				</ul>
+				<p class="para1"><b>Join us soon and get the best results</b></p><br/>
+			</td>
+		</tr>
+
+		<!-- Register Section -->
+		<tr id="register-section">
+  			<td colspan="4">
+			<br><br/>
+			<form action="data.php" method="post">
+	  		<table class="register-table">
+	   		<tr>
+		  		<td>First Name:</td>
+		  		<td><input type="text" name="fname"/></td>
+			</tr>
+			<tr>
+		  		<td>Last Name:</td>
+		  		<td><input type="text" name="Lname"/></td>
+			</tr>
+	   		<tr>
+		  		<td>Gender:</td>
+		  		<td>
+					<label><input type="radio" name="sex" value="Male"/> Male</label>
+					<label><input type="radio" name="sex" value="Female"/> Female</label>
+		  		</td>
+			</tr>
+			<tr>
+		  		<td>Date of Birth:</td>
+		  		<td><input type="date" name="dob"/></td>
+	   	 	</tr>
+			<tr>
+		  		<td>A/L Stream:</td>
+		  		<td>
+					<input list="sub" name="streams" />
+					<datalist id="sub">
+			  			<option value="Art">
+			  			<option value="Bio">
+			 			<option value="Commerce">
+			  			<option value="Maths">
+			  			<option value="Tech">
+					</datalist>
+		  		</td>
+			</tr>
+			<tr>
+		  		<td>E-Mail:</td>
+		  		<td><input type="text" name="Email"/></td>
+			</tr>
+			<tr>
+		  		<td>Telephone:</td>
+		  		<td><input type="text" name="phone"/></td>
+			</tr>
+			<tr>
+		  		<td>Password:</td>
+		  		<td><input type="password" name="password"/></td>
+			</tr>
+			<tr>
+		  		<td colspan="2">
+					<label><input type="checkbox" name="true" value="Agree" checked> I certify that above information is correct and true.</label>
+		  		</td>
+				</tr>
+			<tr>
+		  		<td colspan="2" style="text-align: center;">
+					<input type="submit" value="Submit" />
+		  		</td>
+			</tr>
+	  		</table>
+			</form>
+ 		 	</td>
+		</tr>
+
+		<!-- Gallery Section -->
+		<tr id="gallery-section">
+  			<td colspan="4">
+    			<table style="margin: auto;">
+      				<tr>
+        				<td><img src="1.jpg" style="width: 200px; border-radius: 10px;"></td>
+        				<td><img src="2.jpg" style="width: 200px; border-radius: 10px;"></td>
+        				<td><img src="3.jpg" style="width: 200px; border-radius: 10px;"></td>
+      				</tr>
+      				<tr>
+        				<td><img src="4.jpg" style="width: 200px; border-radius: 10px;"></td>
+        				<td><img src="5.jpg" style="width: 200px; border-radius: 10px;"></td>
+        				<td><img src="6.jpg" style="width: 200px; border-radius: 10px;"></td>
+      				</tr>
+    			</table>
+  			</td>
+		</tr>
+
+
+
+		<tr>
+			<td colspan="4" class="para1">This website Powered by Mr.Dammika Adikari.</td>
+		</tr>
+	</table>
+
+</body>
+</html>
